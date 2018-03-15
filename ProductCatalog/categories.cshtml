@@ -16,7 +16,7 @@
     @foreach (Category cat in categories)
     {
         <tr>
-            <td>@cat.Name</td>
+            <td><a href="~/productList.cshtml?category=@cat.Name"> @cat.Name</a> </td>
         </tr>
     }
 </table>

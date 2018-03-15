@@ -91,6 +91,8 @@
     <Content Include="categories.cshtml" />
     <None Include="packages.config" />
     <Content Include="products.cshtml" />
+    <Content Include="productList.cshtml" />
+    <Content Include="product.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

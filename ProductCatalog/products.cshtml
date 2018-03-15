@@ -6,6 +6,7 @@
     //create a relative reference to the file where we are saving json
     string filePathPro = Util.ProductPath;
     var products = DBProvider.GetProducts(filePathPro);
+    products = products.OrderBy(p => p.Name).ToList();
 }
 <h1>Products</h1>
 <table>
@@ -18,7 +19,7 @@
     @foreach (Product pro in products)
     {
         <tr>
-            <td>@pro.Name</td>
+            <td><a href="~/product.cshtml?id=@pro.ID">@pro.Name </a></td>
             <td>@pro.Size</td>
             <td>@pro.Price DK</td>
             <td>@pro.Category.Name</td>

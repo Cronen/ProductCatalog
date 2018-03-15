@@ -1,81 +1,101 @@
 [
   {
+    "ID": 1,
     "Name": "Jack and Jones",
     "Size": "S",
     "Price": 149.0,
     "Category": {
+      "ID": 1,
       "Name": "T-shirt"
     }
   },
   {
+    "ID": 2,
     "Name": "Solid",
     "Size": "M",
     "Price": 149.0,
     "Category": {
+      "ID": 1,
       "Name": "T-shirt"
     }
   },
   {
+    "ID": 3,
     "Name": "H&M",
     "Size": "L",
     "Price": 99.0,
     "Category": {
+      "ID": 1,
       "Name": "T-shirt"
     }
   },
   {
+    "ID": 4,
     "Name": "H&M",
     "Size": "XXL",
     "Price": 119.0,
     "Category": {
+      "ID": 1,
       "Name": "T-shirt"
     }
   },
   {
+    "ID": 5,
     "Name": "H&M",
     "Size": "L",
     "Price": 199.0,
     "Category": {
+      "ID": 2,
       "Name": "Sweater"
     }
   },
   {
+    "ID": 6,
     "Name": "Jack and Jones",
     "Size": "XL",
     "Price": 249.0,
     "Category": {
+      "ID": 2,
       "Name": "Sweater"
     }
   },
   {
+    "ID": 7,
     "Name": "Solid",
     "Size": "M",
     "Price": 219.0,
     "Category": {
+      "ID": 2,
       "Name": "Sweater"
     }
   },
   {
+    "ID": 8,
     "Name": "Solid",
     "Size": "M",
     "Price": 249.0,
     "Category": {
+      "ID": 3,
       "Name": "Hoodie"
     }
   },
   {
+    "ID": 9,
     "Name": "Jack and Jones",
     "Size": "S",
     "Price": 199.0,
     "Category": {
+      "ID": 3,
       "Name": "Hoodie"
     }
   },
   {
+    "ID": 10,
     "Name": "SuperDry",
     "Size": "M",
     "Price": 175.0,
     "Category": {
+      "ID": 1,
       "Name": "T-shirt"
     }
   }

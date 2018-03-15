@@ -1,0 +1,24 @@
+﻿@using ProductLibrary;
+@{
+    Layout = "Layout/_Master.cshtml";
+    Page.Title = "Product";
+
+    var p = new Product();
+    try
+    {
+        var products = DBProvider.GetProducts(Util.ProductPath);
+        int proID = int.Parse(Request["id"]);
+        p = products.Single(pr => pr.ID == proID);
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine(e);
+        Response.Redirect("index.cshtml", false);
+    }
+}
+<h3>Details about @p.Name</h3>
+ID: @p.ID <br />
+Name: @p.Name <br />
+Price: @p.ID <br />
+Size: @p.Size <br />
+Category: @p.Category.Name <br /><br />

@@ -1,11 +1,14 @@
 [
   {
+    "ID": 1,
     "Name": "T-shirt"
   },
   {
+    "ID": 2,
     "Name": "Sweater"
   },
   {
+    "ID": 3,
     "Name": "Hoodie"
   }
 ]
