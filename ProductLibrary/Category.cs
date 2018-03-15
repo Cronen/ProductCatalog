@@ -9,6 +9,8 @@ namespace ProductLibrary
     public class Category
     {
         public string Name { get; set; }
-        public string AmountType { get; set; }
+        public Category(string name) {
+            Name = name;
+        }
     }
 }
