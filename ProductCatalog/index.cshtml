@@ -1,9 +1,10 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-</head>
-<body>
+﻿@using ProductLibrary;
+@{
+    Layout = "Layout/_Master.cshtml";
+    DBProvider.SetupDB(Util.CategoryPath, Util.ProductPath);
+    Page.titel = "Home";
+}
 
-</body>
-</html>
+<h2>Welcome to the ProductCatalog</h2>
+<img class="rotator" src="http://www.unixstickers.com/image/data/stickers/ubuntu/Ubuntu-circle-friends-white-and-black-no-contour.sh.png" alt="Logo">
+

@@ -1,0 +1,23 @@
+﻿@using ProductLibrary;
+@{
+    Layout = "Layout/_Master.cshtml";
+    Page.Title = "List of categories";
+
+    //create a relative reference to the file where we are saving json
+    string filePathCat = Util.CategoryPath;
+    var categories = DBProvider.GetCategories(filePathCat);
+}
+
+<h1>Categories</h1>
+<table>
+    <tr>
+        <th>Name</th>
+    </tr>
+    @foreach (Category cat in categories)
+    {
+        <tr>
+            <td>@cat.Name</td>
+        </tr>
+    }
+</table>
+

@@ -85,9 +85,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.cshtml" />
+    <Content Include="Layout\_Master.cshtml" />
     <Content Include="Data\Categories.json" />
     <Content Include="Data\Products.json" />
+    <Content Include="categories.cshtml" />
     <None Include="packages.config" />
+    <Content Include="products.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

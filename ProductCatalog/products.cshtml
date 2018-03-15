@@ -1,0 +1,28 @@
+﻿@using ProductLibrary;
+@{
+    Layout = "Layout/_Master.cshtml";
+    Page.Title = "List of products";
+
+    //create a relative reference to the file where we are saving json
+    string filePathPro = Util.ProductPath;
+    var products = DBProvider.GetProducts(filePathPro);
+}
+<h1>Products</h1>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Size</th>
+        <th>Price</th>
+        <th>Categori</th>
+    </tr>
+    @foreach (Product pro in products)
+    {
+        <tr>
+            <td>@pro.Name</td>
+            <td>@pro.Size</td>
+            <td>@pro.Price DK</td>
+            <td>@pro.Category.Name</td>
+        </tr>
+    }
+</table>
+

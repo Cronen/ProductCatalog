@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@Page.Title</title>
+    <title>SchoolApp</title>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .rotator {
+            margin: 20px;
+            width: 150px;
+            height: 150px;
+            animation: spin 5s linear infinite;
+        }
+
+        @@keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    @RenderSection("head", required: false)
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a> &bull;
+        <a href="categories">Categories</a> &bull;
+        <a href="products">Products</a> &bull;
+    </nav>
+    <hr />
+    <main>
+        @RenderBody()
+    </main>
+    <hr />
+    <footer>
+        Copyright - @DateTime.Now.ToString("D") - Crone
+    </footer>
+</body>
+</html>

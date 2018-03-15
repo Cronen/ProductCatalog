@@ -1,3 +1,82 @@
-﻿{
-
-}
+[
+  {
+    "Name": "Jack and Jones",
+    "Size": "S",
+    "Price": 149.0,
+    "Category": {
+      "Name": "T-shirt"
+    }
+  },
+  {
+    "Name": "Solid",
+    "Size": "M",
+    "Price": 149.0,
+    "Category": {
+      "Name": "T-shirt"
+    }
+  },
+  {
+    "Name": "H&M",
+    "Size": "L",
+    "Price": 99.0,
+    "Category": {
+      "Name": "T-shirt"
+    }
+  },
+  {
+    "Name": "H&M",
+    "Size": "XXL",
+    "Price": 119.0,
+    "Category": {
+      "Name": "T-shirt"
+    }
+  },
+  {
+    "Name": "H&M",
+    "Size": "L",
+    "Price": 199.0,
+    "Category": {
+      "Name": "Sweater"
+    }
+  },
+  {
+    "Name": "Jack and Jones",
+    "Size": "XL",
+    "Price": 249.0,
+    "Category": {
+      "Name": "Sweater"
+    }
+  },
+  {
+    "Name": "Solid",
+    "Size": "M",
+    "Price": 219.0,
+    "Category": {
+      "Name": "Sweater"
+    }
+  },
+  {
+    "Name": "Solid",
+    "Size": "M",
+    "Price": 249.0,
+    "Category": {
+      "Name": "Hoodie"
+    }
+  },
+  {
+    "Name": "Jack and Jones",
+    "Size": "S",
+    "Price": 199.0,
+    "Category": {
+      "Name": "Hoodie"
+    }
+  },
+  {
+    "Name": "SuperDry",
+    "Size": "M",
+    "Price": 175.0,
+    "Category": {
+      "Name": "T-shirt"
+    }
+  }
+]
