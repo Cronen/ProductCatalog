@@ -1,32 +1,22 @@
 ﻿@using ProductLibrary;
 @{
     Layout = "Layout/_Master.cshtml";
-    Page.Title = "List of products";
 
     string cat = "";
     var proList = new List<Product>();
-
-    var foundProducts = new List<Product>();
-
-
-
     //create a relative reference to the file where we are saving json
     try
     {
-        proList = DBProvider.GetProducts(Util.ProductPath);
         cat = Request["category"];
+        proList = DBProvider.GetProductsFromCategory(cat, Util.ProductPath);
 
-        foundProducts = proList.Where(p => p.Category.Name == cat).ToList();
     }
     catch (Exception e)
     {
         Console.WriteLine(e);
         Response.Redirect("index.cshtml", false);
     }
-    if (IsPost)
-    {
-
-    }
+    Page.Title = "Products under " + cat;
 }
 <h1>Products in category @cat</h1>
 <table>
@@ -36,7 +26,7 @@
         <th>Size</th>
         <th>Price</th>
     </tr>
-    @foreach (Product pro in foundProducts)
+    @foreach (Product pro in proList)
     {
     <tr>
         <td>@pro.Category.Name</td>

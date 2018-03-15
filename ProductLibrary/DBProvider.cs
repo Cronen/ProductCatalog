@@ -40,7 +40,6 @@ namespace ProductLibrary
             //save the json to the file
             File.WriteAllText(path, jsonData);
         }
-
         public static List<Category> GetCategories(string path)
         {
             //read the content from the json file
@@ -61,6 +60,20 @@ namespace ProductLibrary
             List<Product> result = JsonConvert.DeserializeObject<List<Product>>(jsonData, dateTimeConverter);
             return result;
         }
-
+        public static List<Product> GetProductsOrdered(string path)
+        {
+            var proList = GetProducts(path);
+            return proList.OrderBy(p => p.Name).ToList(); ;
+        }
+        public static Product GetProduct(int id, string path)
+        {
+            var productList = GetProducts(path);
+            return productList.SingleOrDefault(pr => pr.ID == id);
+        }
+        public static List<Product> GetProductsFromCategory(string cat, string path)
+        {
+            var proList = GetProducts(path);
+            return proList.Where(p => p.Category.Name == cat).ToList();
+        }
     }
 }

@@ -4,9 +4,7 @@
     Page.Title = "List of products";
 
     //create a relative reference to the file where we are saving json
-    string filePathPro = Util.ProductPath;
-    var products = DBProvider.GetProducts(filePathPro);
-    products = products.OrderBy(p => p.Name).ToList();
+    var products = DBProvider.GetProductsOrdered(Util.ProductPath);
 }
 <h1>Products</h1>
 <table>
