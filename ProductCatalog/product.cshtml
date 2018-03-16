@@ -2,18 +2,22 @@
 @{
     Layout = "Layout/_Master.cshtml";
 
-
     var p = new Product();
     try
     {
-
         int proID = int.Parse(Request["id"]);
         p = DBProvider.GetProduct(proID, Util.ProductPath);
+        if (p == null)
+        {
+            throw new Exception();
+        }
     }
     catch (Exception e)
     {
         Console.WriteLine(e);
+        //The following will redirect the user to the front page. 
         Response.Redirect("index.cshtml", false);
+        Response.End();
     }
     Page.Title = p.Name;
 }

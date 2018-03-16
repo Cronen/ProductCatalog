@@ -14,7 +14,9 @@
     catch (Exception e)
     {
         Console.WriteLine(e);
+        //The following will redirect the user to the front page. 
         Response.Redirect("index.cshtml", false);
+        Response.End();
     }
     Page.Title = "Products under " + cat;
 }
